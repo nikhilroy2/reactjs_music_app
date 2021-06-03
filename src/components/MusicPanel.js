@@ -38,7 +38,7 @@ function MusicPanel(props) {
 
 const SortListing = (props) => {
     const [sortName, setSortName] = useState('Listeners Counter');
-    const [data, setData] = useState([])
+    const [data, setData] = useState(jsonData.music)
     function sortHandler(val, sort) {
        // const sortText = sort
         //console.log(val)
@@ -49,6 +49,7 @@ const SortListing = (props) => {
         // };
         //const sortProperty = types[sortText];
         const sorted = jsonData.music.sort((a, b) => a.title.localeCompare(b.title));
+        //console.log(sorted)
         //console.log(sorted);
         setData(sorted);
     }
@@ -86,15 +87,16 @@ const MusicListing = (props) => {
         audioPlay.play()
         //val.className+= ' list_active_bg';
     }
+    // console.log(props.sort)
 
     return (
         <div className="musicPanel_wrapper">
             <ul className="list-group MusicListing">
 
-                {jsonData.music.map(val => {
+                {props.sort.map((val,id) => {
                     return (
                         (
-                            <li onClick={(e) => playMusic(e.target,`${val.path}`)} key={val.title} className={`list-group-item bg_transparent p-4 cup ${val.title.toLowerCase().indexOf(props.inputValue.toLowerCase()) !== -1 ? 'd-block': 'd-none'}`}>
+                            <li onClick={(e) => playMusic(e.target,`${val.path}`)} key={id} className={`list-group-item bg_transparent p-4 cup ${val.title.toLowerCase().indexOf(props.inputValue.toLowerCase()) !== -1 ? 'd-block': 'd-none'}`}>
                                 <div className="d-flex">
                                     <img src="https://api.somafm.com/logos/256/groovesalad256.png" className="music_logo" alt="music_logo" />
                                     <div className="content text-white ms-3 flex-grow-1">
