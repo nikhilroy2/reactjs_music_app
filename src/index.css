@@ -1,0 +1,20 @@
+.cup {
+  cursor: pointer;
+}
+
+.text_str {
+  color: #787ba2;
+}
+
+.bg_transparent {
+  background: transparent !important;
+}
+
+.text_corn {
+  color: cornflowerblue;
+}
+
+.bg_corn {
+  background: #222336 !important;
+}
+/*# sourceMappingURL=index.css.map */

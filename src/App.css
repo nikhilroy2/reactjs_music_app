@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(217deg, rgba(220, 20, 60, 0.8), rgba(220, 20, 60, 0) 70.71%), linear-gradient(127deg, #8086a0, rgba(128, 134, 160, 0) 70.71%), linear-gradient(336deg, rgba(100, 149, 237, 0.8), rgba(100, 149, 237, 0) 70.71%);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.Music_App {
+  height: calc(100vh - 6rem);
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  background: url("./bg.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.Navbar {
+  background: #111320;
+}
+
+.MusicControl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #111320;
+}
+
+.MusicPanel {
+  position: absolute;
+  width: 450px;
+  background: #222336;
+  height: 100%;
+  right: 0;
+  top: 0;
+  -webkit-transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.MusicPanel.MusicPanelHide {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.MusicPanel .SearchStation .form-control:focus {
+  border: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.MusicPanel .musicPanel_wrapper {
+  height: calc(100% - 200px);
+  overflow: auto;
+}
+
+.MusicPanel .MusicListing .music_logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-radius: 2px solid white !important;
+}
+
+.MusicPanel .MusicListing .list_active_bg {
+  background: #252741 !important;
+}
+
+.form_control_focus:focus {
+  border: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+/*# sourceMappingURL=App.css.map */
