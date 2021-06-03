@@ -33,7 +33,7 @@ function MusicControl(props) {
                                 <input type="file" name="file" accept=".mp3" className="form-control  bg_corn border-0 outline-0 form_control_focus" />
                             </div>
                             <div className="form-group bg_transparent mb-3">
-                                <button onClick={e => dropdownHandle()} className="btn btn-sm btn-danger me-3" data-mdb-dismiss="dropdown">
+                                <button type="button" onClick={e => dropdownHandle()} className="btn btn-sm btn-danger me-3" data-mdb-dismiss="dropdown">
                                     Cancel
                                 </button>
                                 <button onClick={e => dropdownHandle()} type="submit" className="btn btn-sm btn-success" data-mdb-dismiss="dropdown">
