@@ -93,8 +93,8 @@ const MusicListing = (props) => {
 
                 {jsonData.music.map(val => {
                     return (
-                        val.title.toLowerCase().indexOf(props.inputValue) !== -1 ? (
-                            <li onClick={(e) => playMusic(e.target,`${val.path}`)} key={val.title} className={`list-group-item bg_transparent p-4 cup`}>
+                        (
+                            <li onClick={(e) => playMusic(e.target,`${val.path}`)} key={val.title} className={`list-group-item bg_transparent p-4 cup ${val.title.toLowerCase().indexOf(props.inputValue.toLowerCase()) !== -1 ? 'd-block': 'd-none'}`}>
                                 <div className="d-flex">
                                     <img src="https://api.somafm.com/logos/256/groovesalad256.png" className="music_logo" alt="music_logo" />
                                     <div className="content text-white ms-3 flex-grow-1">
@@ -109,7 +109,7 @@ const MusicListing = (props) => {
                                     </div>
                                 </div>
                             </li>
-                        ) : ''
+                        )
 
                     )
                 })}
